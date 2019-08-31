@@ -12,7 +12,8 @@
     "express": "^4.16.4",
     "react": "^16.9.0",
     "react-dom": "^16.8.6",
-    "react-webcam": "^2.0.1"
+    "react-webcam": "^2.0.1",
+    "onnxjs": "^0.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
