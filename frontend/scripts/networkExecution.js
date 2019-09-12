@@ -20,7 +20,8 @@ function runNetWithCamera() {
   const video = document.querySelector('video');
   const canvas = document.querySelector('canvas');
   const context = canvas.getContext('2d');
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // console.log(["hi", video.width, video.height]);
+  context.drawImage(video, 0, 0, 224, 224);
   const preprocessedData = preprocess(context);
   const outputData = session.run([preprocessedData]).then(output => {
     return output.values().next().value;

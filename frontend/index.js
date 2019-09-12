@@ -11,14 +11,13 @@ const Main = () => {
     facingMode: "environment",
     // facingMode: "user",
     frameRate: 20,
-    video: { width: 224, height: 224 }
+    height: 600,
+    width: 600
   };
   return (
     <div>
       <Webcam
         videoConstraints={videoConstraints}
-        width={"224px"}
-        height={"224px"}
         audio={false}
         overflow={"hidden"}
       />
