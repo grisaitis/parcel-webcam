@@ -7,6 +7,7 @@ function preprocess(ctx) {
   // source: https://github.com/microsoft/onnxjs-demo/blob/master/src/components/models/Squeezenet.vue
   const imageData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
   const { data, width, height } = imageData;
+
   // data processing
   const dataTensor = ndarray(new Float32Array(data), [width, height, 4]);
   const dataProcessedTensor = ndarray(new Float32Array(width * height * 3), [1, 3, width, height]);
@@ -22,14 +23,8 @@ function preprocess(ctx) {
   ops.divseq(dataProcessedTensor.pick(0, 2, null, null), 0.225);
   const tensor = new Tensor(new Float32Array(width * height * 3), 'float32', [1, 3, width, height]);
   tensor.data.set(dataProcessedTensor.data);
+  console.log(tensor);
   return tensor;
 }
 
-function runInference(webcamElement) {
-  console.log("in run inference");
-  const ctx = webcamElement.getCanvas();
-  window.ctx = ctx;
-  console.log([ctx.canvas.width, ctx.canvas.height]);
-}
-
-export {preprocess, runInference};
+export {preprocess};

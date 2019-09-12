@@ -12,5 +12,6 @@
     ],
     "exclude": []
   },
-  "noSavedEvents": true
+  "noSavedEvents": true,
+  "throttle": 1000
 }

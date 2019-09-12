@@ -18,7 +18,9 @@
     "ndarray-ops": "^1.2.2",
     "ndarray-resample": "^1.0.1",
     "ndarray-squeeze": "^1.0.2",
-    "ndarray-unpack": "^1.0.0"
+    "ndarray-unpack": "^1.0.0",
+    "react-bootstrap": "^0.32.4",
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",

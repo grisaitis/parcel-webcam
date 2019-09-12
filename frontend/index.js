@@ -1,30 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Webcam from 'react-webcam';
-import {useOnnx} from './scripts/useOnnx.js';
-import {runInference} from './scripts/squeezeNet.js';
+// import {useOnnx} from './scripts/demoOnnx.js';
+import {runNetWithCamera} from './scripts/networkExecution.js';
 
 
 const Main = () => {
   // useOnnx();
   const videoConstraints = {
-    // facingMode: "environment",
-    facingMode: "user",
-    frameRate: 10
+    facingMode: "environment",
+    // facingMode: "user",
+    frameRate: 20,
+    video: { width: 224, height: 224 }
   };
-  const webcam = new Webcam({
-    "audio": true
-  });
-  console.log(webcam);
-  window.webcam = webcam;
-  
   return (
     <div>
       <Webcam
         videoConstraints={videoConstraints}
-        width={"300"}
+        width={"224px"}
+        height={"224px"}
         audio={false}
+        overflow={"hidden"}
       />
+      <br></br>
+      <button
+        onClick={runNetWithCamera}
+        style={{height: "100px", width: "100%"}}
+      >
+        What am i?
+      </button>
     </div>
   );
 };
