@@ -7,13 +7,18 @@
     "start": "node backend/server.js"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.1",
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
     "express": "^4.16.4",
     "react": "^16.9.0",
-    "react-dom": "^16.8.6",
-    "react-webcam": "^2.0.1",
-    "onnxjs": "^0.1.7"
+    "react-dom": "^16.9.0",
+    "react-webcam": "^3.0.1",
+    "onnxjs": "^0.1.7",
+    "ndarray": "^1.0.18",
+    "ndarray-ops": "^1.2.2",
+    "ndarray-resample": "^1.0.1",
+    "ndarray-squeeze": "^1.0.2",
+    "ndarray-unpack": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
